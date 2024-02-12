@@ -6,10 +6,10 @@ const commitMessageRegExp = /^ASTONJS-1 (feat|fix|chore): .+/;
 let exitCode = 0;
 const commitMsgFile = process.argv[2];
 const message = fs.readFileSync(commitMsgFile, 'utf8');
-const isValid = conventionalCommitMessageRegExp.test(message);
+const isValid = commitMessageRegExp.test(message);
 
 if(!isValid) {
-   console.log('Cannot commit: the commit message does not comply with conventional commits standards.');
+   console.log('ERROR: Your commit message does not match the required format "ASTONJS-1 [feat/fix/chore]: commit msg"');
    exitCode = 1;
 }
 
