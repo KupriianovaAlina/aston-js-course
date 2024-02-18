@@ -4,7 +4,7 @@ function getLength(item) {
     console.log(item.length);
     return;
   }
-  // целое число
+  // число
   if (typeof item === "number") {
     console.log(String(item).length);
     return;
