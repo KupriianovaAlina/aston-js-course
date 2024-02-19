@@ -1,4 +1,4 @@
-function createNode(value, left = null, right = null) {
+function createNode(value, left = undefined, right = undefined) {
   return { value, left, right };
 }
 
@@ -26,5 +26,5 @@ console.log(compare(tree1, tree2)); // true
 const tree3 = createNode(1, createNode(3), createNode(3));
 console.log(compare(tree1, tree3)); // false
 
-const tree4 = createNode(1, createNode(2), createNode(3, null, createNode(3)));
+const tree4 = createNode(1, createNode(2), createNode(3, undefined, createNode(3)));
 console.log(compare(tree1, tree4)); // false

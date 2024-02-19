@@ -46,7 +46,7 @@ getLength(12345);
 getLength(true);
 // undefinded, длина 0
 getLength(undefined);
-// nul, длина 0
+// null, длина 0
 getLength(null);
 // NaN, длина 0
 getLength(NaN);
