@@ -1,14 +1,14 @@
 const pattern = (n) => {
-  const arr = Array.from(Array(n)).map((e, i) => i + 1)
+  const arr = Array.from(Array(n)).map((e, i) => i + 1);
 
-  arr.map((i) => {
-    console.log(arr.slice(0, i).join(""))
-  })
+  for (let i = 1; i <= n; i++) {
+    console.log(" ".repeat(n - i) + arr.slice(0, i - 1).join("") + i + arr.slice(0, i - 1).reverse().join(""))
+  };
 
-  arr.map((i) => {
-    console.log(arr.slice(0, arr.length - i).join(""))
-  })
-}
+  for (let i = n - 1; i > 0; i--) {
+    console.log(" ".repeat(n - i) + arr.slice(0, i - 1).join("") + i + arr.slice(0, i - 1).reverse().join(""))
+  };
+};
 
 pattern(0);
 pattern(5);
